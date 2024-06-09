@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Party Time</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="fireworks.js" defer></script>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #222;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+
+        .header .logo {
+            flex: 1;
+            text-align: left;
+        }
+
+        .header .logo img {
+            width: 150px;
+            height: auto;
+        }
+
+        .header .navbar {
+            flex: 2;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .header .navbar a {
+            margin: 0 15px;
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .header .navbar a:hover {
+            background-color: #ffcc00;
+            color: #222;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('/mnt/data/image.png') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 4em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .about-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #6a0dad;
+        }
+
+        .about-section p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto 40px auto;
+        }
+
+        /* Team Section */
+        .team-section {
+            background-color: #fff;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .team-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #6a0dad;
+        }
+
+        .team-section .team {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .team-section .team-member {
+            flex: 1 1 calc(25% - 40px);
+            margin: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .team-section .team-member:hover {
+            transform: translateY(-10px);
+        }
+
+        .team-section .team-member img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .team-section .team-member .member-info {
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        .team-section .team-member .member-info h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #6a0dad;
+        }
+
+        .team-section .team-member .member-info p {
+            font-size: 1em;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .footer a {
+            color: #ffcc00;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="logo.png" alt="Party Time Logo">
+        </div>
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="#">Packages</a>
+            <a href="about.html">About Us</a>
+            <a href="#">Gallery</a>
+            <a href="contact.html">Contact</a>
+            <a href="#">FAQs</a>
+        </div>
+    </div>
+
+    <div class="hero">
+        <div>
+            <h1>About Us</h1>
+            <p>Get to know the people behind Party Time.</p>
+        </div>
+    </div>
+
+    <section class="about-section">
+        <div class="container">
+            <h2>Our Story</h2>
+            <p>Party Time was founded with the vision of creating unforgettable events. Our team of experienced event planners, caterers, and entertainers work tirelessly to ensure that every detail is perfect. From intimate gatherings to large corporate events, we pride ourselves on our ability to bring your vision to life.</p>
+        </div>
+    </section>
+
+    <section class="team-section">
+        <div class="container">
+            <h2>Meet Our Team</h2>
+            <div class="team">
+                <div class="team-member">
+                    <img src="team1.jpg" alt="Team Member 1">
+                    <div class="member-info">
+                        <h3>Finan Fisteky</h3>
+                        <p>Founder & CEO</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="team2.jpg" alt="Team Member 2">
+                    <div class="member-info">
+                        <h3>John Doe</h3>
+                        <p>Event Planner</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="team3.jpg" alt="Team Member 3">
+                    <div class="member-info">
+                        <h3>Ronald Smith</h3>
+                        <p>Head Chef</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="team4.jpg" alt="Team Member 4">
+                    <div class="member-info">
+                        <h3>Emma Black</h3>
+                        <p>Entertainment Manager</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer">
+        <p>&copy; 2024 Party Time. All rights reserved. | <a href="contact.html">Contact Us</a></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Party Time</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="fireworks.js" defer></script>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #222;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+
+        .header .logo {
+            flex: 1;
+            text-align: left;
+        }
+
+        .header .logo img {
+            width: 150px;
+            height: auto;
+        }
+
+        .header .navbar {
+            flex: 2;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .header .navbar a {
+            margin: 0 15px;
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .header .navbar a:hover {
+            background-color: #ffcc00;
+            color: #222;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('/mnt/data/image.png') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 4em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #6a0dad;
+        }
+
+        .contact-section p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto 40px auto;
+        }
+
+        .contact-details {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .contact-details div {
+            margin: 0 20px;
+            text-align: left;
+        }
+
+        .contact-details i {
+            font-size: 1.5em;
+            color: #6a0dad;
+            margin-right: 10px;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .contact-form button {
+            background-color: #6a0dad;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #5b0cad;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .footer a {
+            color: #ffcc00;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="path/to/your/logo.png" alt="Party Time Logo">
+        </div>
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="#">Packages</a>
+            <a href="about.html">About Us</a>
+            <a href="#">Gallery</a>
+            <a href="contact.html">Contact</a>
+            <a href="#">FAQs</a>
+        </div>
+    </div>
+
+    <div class="hero">
+        <div>
+            <h1>Contact Us</h1>
+            <p>We'd love to hear from you! Reach out to us using the form below or through our contact details.</p>
+        </div>
+    </div>
+
+    <section class="contact-section">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <p>If you have any questions, comments, or would like to book our services, please use the contact form below or get in touch with us directly using the provided contact details.</p>
+            <div class="contact-details">
+                <div>
+                    <i class="fa fa-phone"></i> <span>+1 (234) 567-890</span>
+                </div>
+                <div>
+                    <i class="fa fa-envelope"></i> <span>info@partytime.com</span>
+                </div>
+                <div>
+                    <i class="fa fa-map-marker"></i> <span>123 Party St, Celebration City, CA 12345</span>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form action="submit_form.php" method="post">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="text" name="subject" placeholder="Subject" required>
+                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer">
+        <p>&copy; 2024 Party Time. All rights reserved. | <a href="contact.html">Contact Us</a></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Party Time</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="fireworks.js" defer></script>
+    <style>
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px;
+            background: linear-gradient(to bottom, rgba(34, 34, 34, 0.9), transparent);
+            position: fixed;
+            width: 100%;
+            z-index: 10;
+            box-sizing: border-box;
+        }
+
+        .header .logo {
+            flex: 1;
+            text-align: center;
+            transition: top 1s, right 1s, width 1s;
+        }
+
+        .header .logo img {
+            width: 150px;
+            height: auto;
+            transition: width 1s;
+        }
+
+        .header .navbar a {
+            margin: 0 15px;
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .header .navbar a:hover {
+            background-color: #ffcc00;
+            color: #222;
+        }
+
+        .scrolled .header {
+            background: rgba(34, 34, 34, 0.9);
+        }
+
+        .services-header {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            font-size: 60px;
+            font-weight: bold;
+            z-index: 5;
+            transition: top 1s, left 1s, font-size 1s;
+        }
+
+        .content {
+            margin-top: 120px; 
+            padding: 20px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            opacity: 0;
+            transition: opacity 1s ease-out;
+        }
+
+        .content.visible {
+            opacity: 1;
+        }
+
+        .scrolled .services-header {
+            top: 60px;
+            left: 30px;
+            font-size: 30px;
+        }
+
+        .scrolled .logo img {
+            width: 100px; /* Adjust size when scrolled */
+            transition: width 1s;
+        }
+
+        .scrolled .logo {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            transition: top 1s, right 1s;
+        }
+
+        .service-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .service-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .service-item img {
+            width: 50%;
+            border-radius: 8px;
+            margin: 0 20px;
+        }
+
+        .service-item .text {
+            width: 50%;
+        }
+
+        .service-item h2 {
+            font-size: 24px;
+            color: #6a0dad;
+            margin-bottom: 10px;
+        }
+
+        .service-item p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        /* Add this new rule to handle the logo's position and size when scrolled */
+.scrolled .logo {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    transition: top 1s, right 1s;
+}
+
+.scrolled .logo img {
+    width: 100px; /* Adjust size when scrolled */
+    transition: width 1s;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: linear-gradient(to bottom, rgba(34, 34, 34, 0.9), transparent);
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    box-sizing: border-box;
+}
+
+.header .logo {
+    flex: 1;
+    text-align: center;
+    transition: top 1s, right 1s, width 1s;
+}
+
+.header .logo img {
+    width: 150px;
+    height: auto;
+    transition: width 1s;
+}
+
+.header .navbar {
+    flex: 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.header .navbar a {
+    margin: 0 15px;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.header .navbar a:hover {
+    background-color: #ffcc00;
+    color: #222;
+}
+
+.scrolled .header {
+    background: rgba(34, 34, 34, 0.9);
+}
+
+    </style>
+</head>
+<body>
+    <div class="swirly-design"></div>
+    <div class="header">
+        <div class="logo">
+            <img src="logo.png" alt="Party Time Logo">
+        </div>
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="#">Packages</a>
+            <a href="about.html">About Us</a>
+            <a href="#">Gallery</a>
+            <a href="contact.html">Contact</a>
+            <a href="#">FAQs</a>
+        </div>
+    </div>
+    <div class="background">
+        <img src="image.png" alt="Background Image">
+        <div class="services-header">
+            <span class="unforgettable">Our</span> <span class="moments">Services</span>
+        </div>
+    </div>
+    <div class="content">
+        <h1>Our Services</h1>
+        <div class="service-item">
+            <img src="image2.jpg" alt="Event Planning">
+            <div class="text">
+                <h2>Event Planning</h2>
+                <p>From initial concept to final execution, our expert event planners will work with you every step of the way to ensure every detail is perfect.</p>
+            </div>
+        </div>
+        <div class="service-item">
+            <img src="image3.jpg" alt="Venue Rental">
+            <div class="text">
+                <h2>Venue Rental</h2>
+                <p>We have a variety of stunning venues available for rent, each with its own unique charm. Whether you need a modern loft, an elegant ballroom, or a chic rooftop, we have the perfect space for your event.</p>
+            </div>
+        </div>
+        <div class="service-item">
+            <img src="image4.jpg" alt="Catering Services">
+            <div class="text">
+                <h2>Catering Services</h2>
+                <p>Our catering team offers delicious menus customized to your event and preferences. From casual buffets to formal dinners, we ensure a memorable dining experience for your guests.</p>
+            </div>
+        </div>
+        <div class="service-item">
+            <img src="image5.jpg" alt="Entertainment">
+            <div class="text">
+                <h2>Entertainment</h2>
+                <p>From DJs to live bands, magicians, and performers, we provide the best entertainment options to keep your guests entertained throughout the event.</p>
+            </div>
+        </div>
+        <div class="service-item">
+            <img src="image6.jpg" alt="Party Hosting">
+            <div class="text">
+                <h2>Party Hosting</h2>
+                <p>Our professional party hosts will ensure your event runs smoothly, allowing you to relax and enjoy the occasion without any stress.</p>
+            </div>
+        </div>
+        <div class="service-item">
+            <img src="image7.jpg" alt="Additional Services">
+            <div class="text">
+                <h2>Additional Services</h2>
+                <p>We also offer a range of additional services, including decoration, transportation, accommodation for guests, and much more. Contact us for custom packages tailored to your specific needs.</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 Party Time. All rights reserved. | <a href="contact.html">Contact Us</a></p>
+    </div>
+    <div class="firework-container"></div>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.services-header');
+            const content = document.querySelector('.content');
+            const logo = document.querySelector('.logo');
+            if (window.scrollY > 50) {
+                document.body.classList.add('scrolled');
+                content.classList.add('visible');
+                logo.classList.add('scrolled');
+            } else {
+                document.body.classList.remove('scrolled');
+                content.classList.remove('visible');
+                logo.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

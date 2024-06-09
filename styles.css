@@ -1,0 +1,712 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background: url('image.png') no-repeat center center fixed;
+    background-size: cover;
+    animation: moveBackground 20s linear infinite;
+}
+
+@keyframes moveBackground {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar {
+    background-color: #222;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-brand, .nav-link {
+    color: #fff !important;
+}
+
+.hero {
+    margin-top: 80px; /* Adjust for fixed navbar height */
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    background-color: #6a0dad;
+    border-color: #6a0dad;
+}
+
+.btn-primary:hover {
+    background-color: #5b0cad;
+    border-color: #5b0cad;
+}
+
+.popular-venues {
+    padding: 80px 0;
+}
+
+.venue-card img,
+.package-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.services {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 80px 0;
+}
+
+.service-card {
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.packages {
+    padding: 80px 0;
+}
+
+.package-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.package-card img {
+    filter: grayscale(100%) blur(2px); /* Add shadowed effect */
+    transition: filter 0.3s ease-in-out; /* Smooth transition */
+}
+
+.package-card img:hover {
+    filter: grayscale(0%) blur(0); /* Remove shadowed effect on hover */
+}
+
+.package-card .card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.testimonial {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 80px 0;
+}
+
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+.swirly-design {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('swirly-design.png') repeat;
+    z-index: -1;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: linear-gradient(to bottom, black, transparent);
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    box-sizing: border-box;
+}
+
+.header .logo {
+    flex: 1;
+    text-align: center;
+}
+
+.header .logo img {
+    width: 150px;
+    height: auto;
+}
+
+.header .company-name {
+    flex: 1;
+    text-align: left;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header .navbar {
+    flex: 2;
+    text-align: right;
+    width: 100%;
+}
+
+.header .navbar a {
+    margin: 0 15px;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.header .navbar a:hover {
+    color: #ffcc00;
+}
+
+.background {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.background img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.background .main-text {
+    color: white;
+    font-size: 60px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 90%;
+    box-sizing: border-box;
+    line-height: 1.2;
+}
+
+.background .main-text .unforgettable {
+    font-size: 1.2em;
+}
+
+.background .main-text .moments {
+    font-size: 1em;
+}
+
+.content {
+    margin-top: 120px; /* Space for the fixed header */
+    padding: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.content h1 {
+    font-size: 32px;
+    color: #333;
+    border-bottom: 2px solid #ffcc00;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Scroll Animations */
+.scroll-animation {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-animation.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Fireworks Styles */
+@keyframes fireworks {
+    0% {
+        transform: scale(0);
+    }
+    70% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+.firework {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(circle, yellow, red);
+    border-radius: 50%;
+    animation: fireworks 1s ease-out infinite;
+}
+
+.firework-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 20;
+}
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Video Background */
+.video-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.video-container video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+}
+
+.video-container .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust overlay color and opacity */
+    z-index: 1;
+}
+
+.video-container .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Other CSS */
+.navbar {
+    background-color: #222;
+}
+
+.hero {
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    background-color: #6a0dad;
+    border-color: #6a0dad;
+}
+
+.btn-primary:hover {
+    background-color: #5b0cad;
+    border-color: #5b0cad;
+}
+
+.popular-venues,
+.services,
+.packages,
+.testimonial {
+    padding: 80px 0;
+}
+
+.services {
+    background-color: #f9f9f9;
+}
+
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Scroll Animations */
+.scroll-animation {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-animation.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Video Background */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.video-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+}
+
+.video-background .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust overlay color and opacity */
+    z-index: 1;
+}
+
+/* Other CSS */
+.navbar {
+    background-color: #222;
+}
+
+.hero {
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    background-color: #6a0dad;
+    border-color: #6a0dad;
+}
+
+.btn-primary:hover {
+    background-color: #5b0cad;
+    border-color: #5b0cad;
+}
+
+.popular-venues,
+.services,
+.packages,
+.testimonial {
+    padding: 80px 0;
+}
+
+.services {
+    background-color: #f9f9f9;
+}
+
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Scroll Animations */
+.scroll-animation {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-animation.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Video Background */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.video-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+}
+
+.video-background .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust overlay color and opacity */
+    z-index: 1;
+}
+
+/* Navbar */
+.navbar {
+    background-color: rgba(34, 34, 34, 0.9);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-brand, .nav-link {
+    color: #fff !important;
+}
+
+/* Hero Section */
+.hero {
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Text shadow for better readability */
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Text shadow for better readability */
+}
+
+.btn-primary {
+    background-color: #ffcc00;
+    border-color: #ffcc00;
+    color: #222;
+}
+
+.btn-primary:hover {
+    background-color: #e6b800;
+    border-color: #e6b800;
+    color: #fff;
+}
+
+/* Sections */
+section {
+    position: relative;
+    z-index: 2;
+}
+
+.popular-venues,
+.services,
+.packages,
+.testimonial {
+    padding: 80px 0;
+}
+
+.popular-venues {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.services {
+    background-color: rgba(34, 34, 34, 0.9);
+    color: #fff;
+}
+
+.packages {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.testimonial {
+    background-color: rgba(34, 34, 34, 0.9);
+    color: #fff;
+}
+
+/* Service and Venue Cards */
+.venue-card, .service-card, .package-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.venue-card img, .service-card img, .package-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.service-card:hover, .venue-card:hover, .package-card:hover {
+    transform: translateY(-10px);
+    transition: transform 0.3s ease;
+}
+
+.service-card .card-title, .venue-card .card-title, .package-card .card-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(34, 34, 34, 0.9);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Scroll Animations */
+.scroll-animation {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-animation.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Services Section */
+.services {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 80px 0;
+}
+
+/* Ensure card-text within services has black text color */
+.services .card-text {
+    color: #000; /* Change the font color to black */
+}
+
+.service-card {
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
